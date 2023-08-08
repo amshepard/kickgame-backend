@@ -1,4 +1,4 @@
-\c tuner
+\c kickgame
 
 
 INSERT INTO kicks (name, brand, price, release_date,) VALUES
