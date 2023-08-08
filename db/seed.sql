@@ -11,9 +11,9 @@ INSERT INTO kicks (name, brand, price, release_date,) VALUES
     ('Air Yeezy', 'Nike', 21499, '20090404'),
     ('Kaws Bapesta', 'A Bathing Ape', 15000, '20060101'),
     ('DRKSHDW Strobe Hexa', 'Rick Owens', 74500, '20220720'),
-    -- ('Air Force One', 'Nike', 08995, '19820301'),
-    -- ('Jordan 1', 'Nike', 06499, '19850401'),
-    -- ('Superstar', 'Adidas', 06499, '19700301'),
+    ('Beams Fishing Vest Grey', 'Crocs', 06000, '20200303'),
+    ('Chunky Dunky', 'Nike', 10000, '20200526'),
+    ('990v6 Baklava', 'New Balance', 22000, '20230317'),
 
     
     -- ('Fame', 'David Bowie', 'Young Americans', '4:12', true ),
