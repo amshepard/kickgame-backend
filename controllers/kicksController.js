@@ -1,9 +1,9 @@
 const express = require("express");
 const kicks = express.Router();
 const {
-  getAllkicks,
-  getkicks,
-  newkicks,
+  getAllKicks,
+  getKicks,
+  newKicks,
   deleteKicks,
   updateKicks,
 } = require("../queries/kicks");
@@ -16,9 +16,9 @@ const {
 
 // INDEX
 kicks.get("/", async (req, res) => {
-  const allkicks = await getAllKicks();
-  if (allkicks[0]) {
-    res.status(200).json(allkicks);
+  const allKicks = await getAllKicks();
+  if (allKicks[0]) {
+    res.status(200).json(allKicks);
   } else {
     res.status(500).json({ error: "server error" });
   }
@@ -27,7 +27,7 @@ kicks.get("/", async (req, res) => {
 // // SHOW
 kicks.get("/:id", async (req, res) => {
   const { id } = req.params;
-  const kicks = await getkicks(id);
+  const kicks = await getKicks(id);
   if (kicks.time) {
     res.json(kicks);
   } else {
@@ -48,17 +48,17 @@ kicks.post("/", checkName, checkKicks, async (req, res) => {
 // UPDATE
 kicks.put("/:id", checkName, checkKicks, async (req, res) => {
   const { id } = req.params;
-  const updatedkicks = await updateKicks(id, req.body);
-  res.status(200).json(updatedkicks);
+  const updatedKicks = await updateKicks(id, req.body);
+  res.status(200).json(updatedKicks);
 });
 
 
 // DELETE
 kicks.delete("/:id", async (req, res) => {
   const { id } = req.params;
-  const deletedkicks = await deleteKicks(id);
+  const deletedKicks = await deleteKicks(id);
   if (deletedkicks.id) {
-    res.status(200).json(deletedkicks);
+    res.status(200).json(deletedKicks);
   } else {
     res.status(404).json("No kicks found my guy.");
   }
