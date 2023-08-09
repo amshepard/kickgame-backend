@@ -1,6 +1,5 @@
 \c kickgame
 
-
 INSERT INTO kicks (name, brand, price, release_date) VALUES
     ('Air Force One', 'Nike', 089.95, '19820301'),
     ('Jordan 1', 'Nike', 064.99, '19850401'),

@@ -50,6 +50,7 @@ kicks.put("/:id", async (req, res) => {
   const { id } = req.params;
   const updatedKick = await updateKick(id, req.body);
   res.status(200).json(updatedKick);
+
 });
 
 
@@ -59,6 +60,7 @@ kicks.delete("/:id", async (req, res) => {
   const deletedKick = await deleteKick(id);
   if (deletedKick.id) {
     res.status(200).json(deletedKick);
+
   } else {
     res.status(404).json("No kicks found my guy.");
   }

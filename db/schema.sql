@@ -12,3 +12,4 @@ CREATE TABLE kicks (
     price NUMERIC(5, 2),
     release_date DATE
 );
+
