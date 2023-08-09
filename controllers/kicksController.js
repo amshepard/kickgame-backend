@@ -27,9 +27,9 @@ kicks.get("/", async (req, res) => {
 // // SHOW
 kicks.get("/:id", async (req, res) => {
   const { id } = req.params;
-  const kicks = await getKicks(id);
-  if (kicks.time) {
-    res.json(kicks);
+  const kick = await getKick(id);
+  if (kick) {
+    res.json(kick);
   } else {
     res.status(404).json({ error: "not found" });
   }
