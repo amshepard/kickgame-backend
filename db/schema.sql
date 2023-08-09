@@ -10,5 +10,5 @@ CREATE TABLE kicks (
     name TEXT NOT NULL,
     brand TEXT NOT NULL,
     price NUMERIC(5, 2),
-    release_date DATE,
+    release_date DATE
 );
