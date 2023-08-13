@@ -1,7 +1,8 @@
+-- Connect to the 'kickgame' database
 \c kickgame
 
-
-INSERT INTO kicks (name, brand, price, release_date,) VALUES
+-- Insert records into the 'kicks' table
+INSERT INTO kicks (name, brand, price, release_date) VALUES
     ('Air Force One', 'Nike', 089.95, '19820301'),
     ('Jordan 1', 'Nike', 064.99, '19850401'),
     ('Superstar', 'Adidas', 064.99, '19700301'),
@@ -13,13 +14,4 @@ INSERT INTO kicks (name, brand, price, release_date,) VALUES
     ('DRKSHDW Strobe Hexa', 'Rick Owens', 745.00, '20220720'),
     ('Beams Fishing Vest Grey', 'Crocs', 060.00, '20200303'),
     ('Chunky Dunky', 'Nike', 100.00, '20200526'),
-    ('990v6 Baklava', 'New Balance', 220.00, '20230317'),
-
-    
-    -- ('Fame', 'David Bowie', 'Young Americans', '4:12', true ),
-    -- ('Once in a Lifetime', 'Talking Heads', 'Remain in Light', '4:19', true ),
-    -- ('The Great Curve', 'Talking Heads', 'Sand in the Vaseline', '5:39', true ),
-    -- ('(Nothing But) Flowers',  'Talking Heads', 'Remain in Light', '6:28', false ),
-    -- ('Books about UFOs', 'Hüsker Dü', 'New Day Rising', '2:49', true ),
-    -- ('Mr. Startup', 'Wolf Parade', 'Thin Mind', '3:31', true ),
-    -- ('We Got the World', 'Icona Pop', 'This is...', '3:17', false );
+    ('990v6 Baklava', 'New Balance', 220.00, '20230317');

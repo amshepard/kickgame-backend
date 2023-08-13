@@ -1,28 +1,27 @@
-// DEPENDENCIES
+// Import necessary libraries
 const cors = require("cors");
 const express = require("express");
 
-// CONFIGURATION
+// Create an instance of Express application
 const app = express();
 
-// MIDDLEWARE
-app.use(cors());
-app.use(express.json());
+// Apply middleware
+app.use(cors()); // Enable Cross-Origin Resource Sharing
+app.use(express.json()); // Parse incoming JSON requests
 
-// ROUTES
+// Define a route for the root URL
 app.get("/", (req, res) => {
-  res.send("Welcome to Kickgame!");
+  res.send("Welcome to Kickgame!"); // Respond with a welcome message
 });
 
-// KICKS ROUTES
+// Import and use the kicksController to handle kicks-related routes
 const kicksController = require("./controllers/kicksController.js");
 app.use("/kicks", kicksController);
 
-// 404 PAGE
+// Define a catch-all route for 404 errors
 app.get("*", (req, res) => {
-    res.status(404).json({ error: "Page not found" });
+    res.status(404).json({ error: "Page not found" }); // Respond with a JSON error message
   });
 
-
-// EXPORT
+// Export the configured Express application
 module.exports = app;
