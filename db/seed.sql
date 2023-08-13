@@ -1,6 +1,7 @@
 -- Connect to the 'kickgame' database
 \c kickgame
 
+
 -- Insert records into the 'kicks' table
 INSERT INTO kicks (name, brand, price, release_date) VALUES
     ('Air Force One', 'Nike', 089.95, '19820301'),

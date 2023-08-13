@@ -22,7 +22,7 @@ const getKick = async (id) => {
     }
   };
 
-  // CREATE
+// CREATE
 const createKick = async (kick) => {
   try {
     const newKick = await db.one(
@@ -34,9 +34,37 @@ const createKick = async (kick) => {
     return error;
   }
 };
+
+// DELETE
+const deleteKick = async (id) => {
+    try {
+      const deletedKick = await db.one(
+        "DELETE FROM kicks WHERE id = $1 RETURNING *",
+        id
+      );
+      return deletedKick;
+    } catch (error) {
+      return error;
+    }
+  };
+
+//UPDATE
+const updateKick = async (id, kick) => {
+    try {
+      const updatedKick = await db.one(
+        "UPDATE kicks SET name=$1, brand=$2, price=$3, release_date=$4 where id=$5 RETURNING *",
+        [kick.name, kick.brand, kick.price, kick.release_date, id]
+      );
+      return updatedKick;
+    } catch (error) {
+      return error;
+    }
+  };
   
   module.exports = {
     getAllKicks,
     createKick,
     getKick,
+    deleteKick,
+    updateKick,
   };

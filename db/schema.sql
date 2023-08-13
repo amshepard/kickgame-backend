@@ -19,6 +19,7 @@ CREATE TABLE kicks (
     brand TEXT NOT NULL,
     -- Define a 'price' column with a numeric data type with 5 total digits and 2 decimal places
     price NUMERIC(5, 2),
+
     -- Define a 'release_date' column with a date data type
     release_date DATE
 );

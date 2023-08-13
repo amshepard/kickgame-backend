@@ -6,17 +6,17 @@ const express = require("express");
 const kicks = express.Router();
 const {
   getAllKicks,
-  getKicks,
-  newKicks,
-  deleteKicks,
-  updateKicks,
+  getKick,
+  createKick,
+  deleteKick,
+  updateKick,
 } = require("../queries/kicks");
 
-const {
-//   checkBoolean,
-  checkName,
-  checkKicks,
-} = require("../validations/checkKicks.js");
+// const {
+// //   checkBoolean,
+//   checkName,
+//   checkKicks,
+// } = require("../validations/checkKicks.js");
 
 // INDEX
 // Route to retrieve all kicks
@@ -45,7 +45,7 @@ kicks.get("/:id", async (req, res) => {
 // Route to create a new kick
 kicks.post("/", checkName, checkKicks, async (req, res) => {
   try {
-    const kicks = await newkicks(req.body);
+    const kicks = await createKick(req.body);
     res.json(kicks);
   } catch (error) {
     res.status(400).json({ error: error });
@@ -53,20 +53,23 @@ kicks.post("/", checkName, checkKicks, async (req, res) => {
 });
 
 // UPDATE
+
 // Route to update an existing kick by its ID
 kicks.put("/:id", checkName, checkKicks, async (req, res) => {
   const { id } = req.params;
-  const updatedKicks = await updateKicks(id, req.body);
-  res.status(200).json(updatedKicks);
+  const updatedKick = await updateKick(id, req.body);
+  res.status(200).json(updatedKick);
+
 });
 
 // DELETE
 // Route to delete a kick by its ID
 kicks.delete("/:id", async (req, res) => {
   const { id } = req.params;
-  const deletedKicks = await deleteKicks(id);
-  if (deletedkicks.id) {
-    res.status(200).json(deletedKicks);
+  const deletedKick = await deleteKick(id);
+  if (deletedKick.id) {
+    res.status(200).json(deletedKick);
+
   } else {
     res.status(404).json("No kicks found my guy.");
   }
