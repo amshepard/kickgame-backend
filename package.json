@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/j-knolley/kickgame-backend.git"
+    "url": "git+https://github.com/amshepard/kickgame-backend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/j-knolley/kickgame-backend/issues"
+    "url": "https://github.com/amshepard/kickgame-backend/issues"
   },
-  "homepage": "https://github.com/j-knolley/kickgame-backend#readme",
+  "homepage": "https://github.com/amshepard/kickgame-backend#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
