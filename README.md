@@ -5,4 +5,4 @@ Front-end: https://github.com/amshepard/kickgame-front-end
 
 Trello: https://trello.com/b/oNt2sbML/kickgame
 
-Deployed site: 
+Deployed site: https://kickgame-front-end-3.onrender.com/
