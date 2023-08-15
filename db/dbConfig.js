@@ -13,6 +13,7 @@ const cn = {
   port: process.env.PG_PORT,
   database: process.env.PG_DATABASE,
   user: process.env.PG_USER,
+  password: process.env.PG_PASSWORD,
 };
 
 // Create a database instance using the 'pg-promise' library and the connection configuration
